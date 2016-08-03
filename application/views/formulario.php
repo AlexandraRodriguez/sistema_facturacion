@@ -9,6 +9,24 @@ $(function(){
 		$(parent).remove();
 	});
 });
+
+$(function renderRowCounter() {
+
+    var rowCount = [25, 50, 100];
+    var first = rowCount[0];
+    var items = '';
+
+    $("agregarProducto").on('click').each(rowCount, function(i,v) {
+        items += "<li><a href=\"#\">" + v + "</a></li>";
+    });
+
+    return  "<div class=\"btn-group btn-group-sm\">" +
+            "<button type=\"button\" data-toggle=\"dropdown\" class=\"btn btn-default dropdown-toggle\">" + first + " <span class=\"caret\"></span></button>" +
+            "<ul class=\"dropdown-menu\">" + items +
+            "</ul>" +
+            "</div> ";
+});
+
 </script>
 <div style ="margin: 0 auto; display: block; height: 520px; width: 900px; background-color: black">
     <div style ="margin: 0 auto; border-color: blue; display: block; height: 20px; width: 900px; background-color:silver">CREAR FACTURA</div>
@@ -31,9 +49,9 @@ $(function(){
                           height: 100%;
                           width: 30%;
                           float: left;">
-                          <div class="form-group " style="margin:20px 20px;">
+                          <div class="form-group" style="margin:20px 20px;">
                             <label for="Nfactura">Numero de Factura</label>
-                            <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura" required="campo necesario">
+                            <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura">
                           </div>
                           <div class="form-group" style="margin:20px 20px;">
                             <label for="fecha de factura">Fecha de Factura</label>
@@ -89,7 +107,14 @@ $(function(){
                     </thead>
                     <tbody>
                       <tr class="fila-base">
-                        <td><input type="text" class="form-control" /></td>
+                        <td><div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria_expanded="true">Productos<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li>Prod 1</li>
+                                <li>Prod 2</li>
+                                <li>Prod 3</li>
+                            </ul>
+                            </div></td>
                         <td><input type="number" class="form-control" /></td>
                         <td>10</td>
                         <td>0</td>
@@ -107,7 +132,7 @@ $(function(){
                     </tbody>
                   </table>
               </div>
-              <button class="btn btn-success" type="button" id="agregarProducto" value="Agregar Producto" ><span class="glyphicon glyphicon-plus"> Agregar Producto</span></button>
+              <input type="button" id="agregarProducto" value="Agregar Producto" />
           </div>
     </div>
 </div>

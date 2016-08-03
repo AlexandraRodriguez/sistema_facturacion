@@ -56,7 +56,7 @@
                 <a href="<?=base_url();?>" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Producto <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     <li class="divider"></li>
-                    <li><a href="#"> CRUD Productos </a></li>
+                    <li><a href="<?=base_url();?>products/new_product"> CRUD Productos </a></li>
                     <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Reportes </b></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Kardex de producto </a></li>
