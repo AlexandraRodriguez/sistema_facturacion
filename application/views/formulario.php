@@ -31,9 +31,9 @@ $(function(){
                           height: 100%;
                           width: 30%;
                           float: left;">
-                          <div class="form-group" style="margin:20px 20px;">
+                          <div class="form-group " style="margin:20px 20px;">
                             <label for="Nfactura">Numero de Factura</label>
-                            <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura">
+                            <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura" required="campo necesario">
                           </div>
                           <div class="form-group" style="margin:20px 20px;">
                             <label for="fecha de factura">Fecha de Factura</label>
@@ -107,7 +107,7 @@ $(function(){
                     </tbody>
                   </table>
               </div>
-              <input type="button" id="agregarProducto" value="Agregar Producto" />
+              <button class="btn btn-success" type="button" id="agregarProducto" value="Agregar Producto" ><span class="glyphicon glyphicon-plus"> Agregar Producto</span></button>
           </div>
     </div>
 </div>

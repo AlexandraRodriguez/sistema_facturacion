@@ -26,7 +26,7 @@
     <div class="span12">
         <ul class="nav nav-tabs">
  			<li >
- 				<a href="<?=base_url();?>inicio" ><span class="glyphicon glyphicon-home"></span> Inicio </b></a>
+ 				<a href="<?=base_url();?>menuController/index" ><span class="glyphicon glyphicon-home"></span> Inicio </b></a>
  			</li>
             <li class="dropdown" >
                 <a href="<?=base_url();?>" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-usd"></span> Ventas <b class="caret"></b></a>
