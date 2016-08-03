@@ -2,7 +2,7 @@
 <script type="text/javascript">
 $(function(){
 	$("#agregarProducto").on('click', function(){
-		$("#tabla tbody tr:eq(0)").clone().removeClass('fila-base').appendTo("#tabla tbody");
+		$("#tabla tbody tr:eq(0)").clone().removeClass("fila-base").appendTo("#tabla tbody");
 	});
 	$(document).on("click",".eliminar",function(){
 		var parent = $(this).parents().get(0);
@@ -30,13 +30,7 @@ $(function renderRowCounter() {
 </script>
 <div style ="margin: 0 auto; display: block; height: 520px; width: 900px; background-color: black">
     <div style ="margin: 0 auto; border-color: blue; display: block; height: 20px; width: 900px; background-color:silver">CREAR FACTURA</div>
-    <div style ="margin: 0 auto;
-          border-color: blue;
-          //border-style: solid;
-          display: block;
-          height: 500px;
-          width: 900px;
-          background-color:white">
+    <from style ="margin: 0 auto;display: block;height: 500px; width: 900px; background-color:white">
           <div style ="border-color: red;
                 //border-style: solid;
                 display: block;
@@ -129,10 +123,26 @@ $(function renderRowCounter() {
                         <td>0</td>
                         <td class="eliminar"><button  id="eliminarfila" type="button" class="btn btn-danger">x</button></td>
                       </tr>
+											<tr>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="number" class="form-control" /></td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>
+                          <select >
+                            <option >iva</option>
+                            <option >13%</option>
+                            <option >14%</option>
+                          </select>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td class="eliminar"><button  id="eliminarfila" type="button" class="btn btn-danger">x</button></td>
+                      </tr>
                     </tbody>
                   </table>
               </div>
               <input type="button" id="agregarProducto" value="Agregar Producto" />
           </div>
-    </div>
+    </from>
 </div>
