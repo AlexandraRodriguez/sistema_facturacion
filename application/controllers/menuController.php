@@ -7,6 +7,8 @@ class MenuController extends CI_Controller{
     $this->load->view('footer.php');
     //$this->load->view('menuView');
   }
+
+
   public function factura(){
     $this->load->view('header.php');
     $this->load->view('navbar.php');
@@ -23,4 +25,11 @@ class MenuController extends CI_Controller{
     $this->load->view('cuerp.php', $data);
     $this->load->view('footer.php');
   }*/
+
+  public function prueba(){}
+  public function impresionfactura(){
+  	
+	$this->load->view('VistaImpresionFactura/impresion');
+  }
+
 }

@@ -51,6 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //$route['default_controller'] = 'menuController';
 $route['default_controller'] = 'menuController';
+
+
 $route['formulario'] = 'menuController/factura';
+
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -33,7 +33,16 @@
                 <ul class="dropdown-menu">
   				<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Proforma</a></li>
 
+<<<<<<< HEAD
+
 					<li><a href="<?=base_url();?>formulario"><span class="glyphicon glyphicon-shopping-cart"></span> Venta</a></li>
+
+                   
+				
+
+=======
+					<li><a href="<?=base_url();?>formulario"><span class="glyphicon glyphicon-shopping-cart"></span> Venta</a></li>
+>>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Reportes </b></a>
 
                     <ul class="dropdown-menu">
@@ -56,7 +65,11 @@
                 <a href="<?=base_url();?>" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Producto <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     <li class="divider"></li>
+<<<<<<< HEAD
+                    <li><a href="#"> CRUD Productos </a></li>
+=======
                     <li><a href="<?=base_url();?>products/new_product"> CRUD Productos </a></li>
+>>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
                     <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Reportes </b></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Kardex de producto </a></li>
@@ -100,6 +113,19 @@
  				<a href="<?=base_url();?>login/salir"  ><span class="glyphicon glyphicon-eject"></span> Salir </b></a>
  			</li>
 
+<<<<<<< HEAD
+
+
+			<li >
+ 				<a href="<?=base_url();?>menuController/impresionfactura" ><span class="glyphicon glyphicon-print"></span> ImpresionFactura </b></a>
+ 			</li> 
+
+
+
+
+
+=======
+>>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
             </ul>
     </div>
 </div>
