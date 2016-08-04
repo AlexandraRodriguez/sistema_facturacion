@@ -9,8 +9,7 @@ $(function(){
 		$(parent).remove();
 	});
 });
-<<<<<<< HEAD
-=======
+
 
 $(function renderRowCounter() {
 
@@ -29,7 +28,7 @@ $(function renderRowCounter() {
             "</div> ";
 });
 
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
+
 </script>
 <div style ="margin: 0 auto; display: block; height: 520px; width: 900px; background-color: black">
     <div style ="margin: 0 auto; border-color: blue; display: block; height: 20px; width: 900px; background-color:silver">CREAR FACTURA</div>
@@ -52,15 +51,11 @@ $(function renderRowCounter() {
                           height: 100%;
                           width: 30%;
                           float: left;">
-<<<<<<< HEAD
+
                           <div class="form-group " style="margin:20px 20px;">
                             <label for="Nfactura">Numero de Factura</label>
                             <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura" required="campo necesario">
-=======
-                          <div class="form-group" style="margin:20px 20px;">
-                            <label for="Nfactura">Numero de Factura</label>
-                            <input style="width:70%" type="text" class="form-control" id="NumeroDeFactura" placeholder="#Factura">
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
+
                           </div>
                           <div class="form-group" style="margin:20px 20px;">
                             <label for="fecha de factura">Fecha de Factura</label>
@@ -90,11 +85,10 @@ $(function renderRowCounter() {
                           height: 100%;
                           width: 25%;
                           float: left;" >
-<<<<<<< HEAD
+
                           <a href="<?=base_url();?>menuController/impresionfactura" >  <button  style = "margin:40px 40px;" id="crearFactura" type="button" class="btn btn-success">crear factura</button><br></a>
-=======
-                            <button  style = "margin:40px 40px;" id="crearFactura" type="button" class="btn btn-success">crear factura</button><br>
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
+
+
                             <button style = "margin:0 40px;" id="cancelar" type="button" class="btn btn-danger">Cancelar</button>
                     </div>
           </div>
@@ -120,9 +114,9 @@ $(function renderRowCounter() {
                     </thead>
                     <tbody>
                       <tr class="fila-base">
-<<<<<<< HEAD
+
                         <td><input type="text" class="form-control" /></td>
-=======
+
                         <td><div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria_expanded="true">Productos<span class="caret"></span></button>
                             <ul class="dropdown-menu">
@@ -131,7 +125,7 @@ $(function renderRowCounter() {
                                 <li>Prod 3</li>
                             </ul>
                             </div></td>
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
+
                         <td><input type="number" class="form-control" /></td>
                         <td>10</td>
                         <td>0</td>
@@ -149,11 +143,11 @@ $(function renderRowCounter() {
                     </tbody>
                   </table>
               </div>
-<<<<<<< HEAD
+
               <button class="btn btn-success" type="button" id="agregarProducto" value="Agregar Producto" ><span class="glyphicon glyphicon-plus"> Agregar Producto</span></button>
-=======
-              <input type="button" id="agregarProducto" value="Agregar Producto" />
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
+
+             
+
           </div>
     </div>
 </div>
