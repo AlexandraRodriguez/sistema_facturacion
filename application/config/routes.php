@@ -52,7 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['default_controller'] = 'menuController';
 $route['default_controller'] = 'menuController';
 
+
 $route['formulario'] = 'menuController/factura';
+
 
 
 
