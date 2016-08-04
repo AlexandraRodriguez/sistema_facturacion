@@ -26,10 +26,10 @@ class MenuController extends CI_Controller{
     $this->load->view('footer.php');
   }*/
 
-  public function prueba(){}
+  //public function prueba(){}
   public function impresionfactura(){
   	
 	$this->load->view('VistaImpresionFactura/impresion');
   }
 
-}
+}?>
