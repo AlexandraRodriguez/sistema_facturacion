@@ -1,6 +1,6 @@
 <?php 
 class Product_model extends CI_Model {
-
+    
 		public $id_producto;
 		public $nombre;
 		public $precio;
@@ -47,6 +47,6 @@ class Product_model extends CI_Model {
 			
     		return $this->db->insert('products', $data);
 		}
-		
-		
+                
+                
 }

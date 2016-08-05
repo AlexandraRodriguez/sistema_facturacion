@@ -2,7 +2,7 @@
 class Products extends CI_Controller {
 
 
-	 public function show($id) {
+    public function show($id) {
 	 	
 		$this->load->model('product_model');
     	
@@ -50,4 +50,21 @@ class Products extends CI_Controller {
     	$this->load->view('productCreated', $data);
 	 	
 	 }
+         
+         
+        public function show_iva(){
+            $this->load->model('iva_model');
+    	
+            //$data['products'] = $this->iva_model->conIVA();
+            $dato = 250000;
+            $this->iva_model->get_iva($dato);            
+	 }
+         
+        //version V.2
+        /*public function show_iva2($dato=250000 ){
+            $this->load->model('iva_model');
+            $this->iva_model->get_iva($dato);   
+            //$data['stock'] = $this->product_model->get_stock_by_product($id);
+		
+	 }*/
 }

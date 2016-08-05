@@ -36,7 +36,7 @@ $(function(){
                     <div style ="border-color: white;
                           //border-style: solid;
                           display: block
-                          float: right;
+                          float right;// float: right (en mi IDE dice: no es correcto)*/
                           height: 100%;
                           width: 45%;
                           float: left;">
@@ -52,7 +52,7 @@ $(function(){
                     <div style ="border-color: black;
                           //border-style: solid;
                           display: block
-                          float: right;
+                          float right;// float: right (en mi IDE dice: no es correcto)*/
                           height: 100%;
                           width: 25%;
                           float: left;" >
