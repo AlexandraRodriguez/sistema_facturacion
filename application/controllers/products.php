@@ -37,8 +37,6 @@ class Products extends CI_Controller {
 	 public function create(){
 	 	$this->load->model('product_model');
 	 	
-	 	$data['result'] = "Product created!";
-		
 		$product['nombre'] = $this->input->post("nombre");
 		$product['precio'] = $this->input->post("precio");
 		$product['stock'] = $this->input->post("stock");
@@ -47,7 +45,7 @@ class Products extends CI_Controller {
 		 
 		$this->load->view('header.php');
     	$this->load->view('navbar.php');
-    	$this->load->view('productCreated', $data);
+    	$this->load->view('productCreated');
 	 	
 	 }
 }

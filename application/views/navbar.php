@@ -77,7 +77,7 @@
             <li class="dropdown" >
                 <a href="<?=base_url();?>" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Clientes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">CRUD Clientes </a></li>
+                    <li><a href="<?=base_url();?>clients/new_client">CRUD Clientes </a></li>
                     <li><a href="#">Listado de cliente</a></li>
                </ul>
             </li>
