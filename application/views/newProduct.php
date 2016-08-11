@@ -13,6 +13,10 @@
     <label for="pwd">Stock:</label>
     <input type="number" class="form-control" id="stock" name="stock">
   </div>
+  <div class="form-group">
+    <label for="pwd">Tipo:</label>
+    <input type="number" class="form-control" id="id_tipo" name="id_tipo">
+  </div>
   
   <button type="submit" class="btn btn-default">Crear</button>
 </form>
