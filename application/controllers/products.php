@@ -48,6 +48,13 @@ class Products extends CI_Controller {
 		$this->load->view('header.php');
     	$this->load->view('navbar.php');
     	$this->load->view('productCreated', $product);
-	 	
+
+	 }
+        public function show_iva(){
+            $this->load->model('iva_model');
+
+            //$data['products'] = $this->iva_model->conIVA();
+            $dato = 250000;
+            $this->iva_model->get_iva($dato);
 	 }
 }
