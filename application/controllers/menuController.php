@@ -5,6 +5,7 @@ class MenuController extends CI_Controller{
     $this->load->view('navbar.php');
     $this->load->view('cuerpo.php');
     $this->load->view('footer.php');
+	 $this->load->helper("form");
     //$this->load->view('menuView');
   }
 
@@ -32,4 +33,7 @@ class MenuController extends CI_Controller{
 	$this->load->view('VistaImpresionFactura/impresion');
   }
 
+  
+
+ 
 }?>
