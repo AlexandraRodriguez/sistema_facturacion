@@ -3,6 +3,6 @@
 
 	<h3>Nuevo Producto</h3>
 	<br />
-	<p>Producto creado!</p>
+	<p><?php echo $result; ?></p>
 	
 </div>

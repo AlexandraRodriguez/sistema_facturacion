@@ -36,8 +36,8 @@
 
 					<li><a href="<?=base_url();?>formulario"><span class="glyphicon glyphicon-shopping-cart"></span> Venta</a></li>
 
-                   
-				
+
+
 
                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Reportes </b></a>
 
@@ -77,7 +77,7 @@
             <li class="dropdown" >
                 <a href="<?=base_url();?>" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Clientes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?=base_url();?>clients/new_client">CRUD Clientes </a></li>
+                    <li><a href="#">CRUD Clientes </a></li>
                     <li><a href="#">Listado de cliente</a></li>
                </ul>
             </li>
@@ -107,19 +107,10 @@
  				<a href="<?=base_url();?>login/salir"  ><span class="glyphicon glyphicon-eject"></span> Salir </b></a>
  			</li>
 
-<<<<<<< HEAD
-
-
 			<li >
  				<a href="<?=base_url();?>menuController/impresionfactura" ><span class="glyphicon glyphicon-print"></span> ImpresionFactura </b></a>
- 			</li> 
+ 			</li>
 
-
-
-
-
-=======
->>>>>>> 6539ae2d7da4a7f950e0115b09f64c6064e2d2f6
             </ul>
     </div>
 </div>

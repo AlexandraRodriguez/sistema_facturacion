@@ -9,7 +9,6 @@ class Products extends CI_Controller {
     	$products = $this->product_model->get_product_by_id($id);
     	$data['nombre'] = $products['nombre'];
     	$data['precio'] = $products['precio'];
-		$data['id_tipo'] = $product['id_tipo'];
     	$data['stock'] = $products['stock'];
        	
 	 	
@@ -38,16 +37,17 @@ class Products extends CI_Controller {
 	 public function create(){
 	 	$this->load->model('product_model');
 	 	
+	 	$data['result'] = "Product created!";
+		
 		$product['nombre'] = $this->input->post("nombre");
 		$product['precio'] = $this->input->post("precio");
-		$product['id_tipo'] = $this->input->post("id_tipo");
 		$product['stock'] = $this->input->post("stock");
 		
 		$this->product_model->create_product($product);
 		 
 		$this->load->view('header.php');
     	$this->load->view('navbar.php');
-    	$this->load->view('productCreated', $product);
+    	$this->load->view('productCreated', $data);
 	 	
 	 }
 }

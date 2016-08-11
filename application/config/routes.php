@@ -54,8 +54,8 @@ $route['default_controller'] = 'menuController';
 
 
 $route['formulario'] = 'menuController/factura';
-
-
+$route['get_products'] = 'menuController/get_products';
+$route['insert_invoice'] = 'menuController/insert_invoice';
 
 
 $route['404_override'] = '';

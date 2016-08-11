@@ -1,21 +1,14 @@
+
+
+	<div style ="margin: 0 auto; display: block; border-style: solid; border-color: black;height: 630px; width: 400px; background-color: white; ">
+
 <!doctype html>
-                          
-  <html>   
+<html>
   <head>
     <meta charset="uft-8"/>
     <title>FACTURA</title>
-	<style media ="print"type="text/css">
-		#imprimir{
-		visibility:hidden
-	}
-	</style>
-  </head> 
-  <body>                   
- 
- 	<div id="Impresion" style ="margin: 0 auto; display: block; border-style: solid; border-color: black;height: 630px; width: 400px; background-color: white; ">
-
-	<button style = "margin:0 450px;" id="imprimir" name="imprimir" type="button" class="btn btn-default " onclick="window.print()">IMPRMIR FACTURA</button>
-
+  </head>
+  <body>
      <p align="center"><small>
 		<font face="Bell MT">SPORT PLAY S.R.L<br>
    			SUCURSAL = 7<br>
