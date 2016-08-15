@@ -23,4 +23,17 @@ class Client_model extends CI_Model {
 			
     		return $this->db->insert('cliente', $data);
 		}
+	
+	public function get_all_clients(){
+			$query = $this->db->query('SELECT * FROM cliente');
+			return $query->result_array();
+	}
+	 
+	public function get_facturas($id){
+			$this->db->select('id_factura, fecha, total');
+			$this->db->from('factura');
+			$this->db->where('id_cliente', $id);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
 }

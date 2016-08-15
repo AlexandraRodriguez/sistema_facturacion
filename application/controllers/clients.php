@@ -24,4 +24,22 @@ class Clients extends CI_Controller {
 	 	
 	 }
 	 
+	 public function get_facturas_por_cliente(){
+		$this->load->model('client_model');
+		$clients = $this->client_model->get_all_clients();
+		$data['clients'] = $clients;
+		$array = array();
+	
+		foreach ($clients as $key => $value) {
+			$id = $value['id_cliente'];
+			$array[$id] = $this->client_model->get_facturas($id);
+		}
+		
+		$data['facturas'] = $array;
+	
+		$this->load->view('header.php');
+    	$this->load->view('navbar.php');
+    	$this->load->view('clients/facturasPorCliente', $data);
+	}
+	 
 }

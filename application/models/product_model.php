@@ -51,12 +51,6 @@ class Product_model extends CI_Model {
 		}
 		
 		public function get_facturas($id){
-			/*
-			 * $query = $this->db->query('SELECT id_factura, cantidad, subtotal
-										FROM factura_detalle
-										WHERE factura_detalle.id_producto = ' + $id + ';');
-			 */
-		
 			$this->db->select('id_factura, cantidad, subtotal');
 			$this->db->from('factura_detalle');
 			$this->db->where('id_producto', $id);
