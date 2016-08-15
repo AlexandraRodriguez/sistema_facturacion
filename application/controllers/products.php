@@ -48,13 +48,34 @@ class Products extends CI_Controller {
 		$this->load->view('header.php');
     	$this->load->view('navbar.php');
     	$this->load->view('productCreated', $product);
-
+	 	
 	 }
-        public function show_iva(){
+	 
+	 public function show_iva(){
             $this->load->model('iva_model');
 
             //$data['products'] = $this->iva_model->conIVA();
             $dato = 250000;
             $this->iva_model->get_iva($dato);
 	 }
+
+	public function get_faturas_por_producto(){
+		$this->load->model('product_model');
+		$products = $this->product_model->get_all_products();
+		$data['products'] = $products;
+		$array = array();
+	
+		foreach ($products as $key => $value) {
+			$id = $value['id_producto'];
+			$nom = $value['nombre'];
+			$array[$id] = $this->product_model->get_facturas($id);
+		}
+		
+		$data['facturas'] = $array;
+	
+		$this->load->view('header.php');
+    	$this->load->view('navbar.php');
+    	$this->load->view('facturasPorProducto', $data);
+	}
+
 }
