@@ -96,7 +96,7 @@
 
 						</ul>
 					</li>
-					<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salidas_modificadas"><span class="glyphicon glyphicon-list-alt"></span> Datos de la empresa</a></li>
+					<li><a href="<?=base_url();?>companias/new_compania"><span class="glyphicon glyphicon-list-alt"></span> Datos de la empresa</a></li>
 					<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salidas_modificadas"><span class="glyphicon glyphicon-list-alt"></span> Personalización de colores</a></li>
 
                      <li><a href="#"><span class="glyphicon glyphicon-floppy-save"></span> Respaldo Base  Datos</a></li>
