@@ -44,7 +44,8 @@
                     <ul class="dropdown-menu">
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Ventas por días</a></li>
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=bodega&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Ventas por cajero</a></li>
-							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salida"><span class="glyphicon glyphicon-list-alt"></span> Ventas por productos</a></li>
+							<li><a href="<?=base_url();?>clients/get_facturas_por_cliente"><span class="glyphicon glyphicon-list-alt"></span> Ventas por cliente</a></li>
+							<li><a href="<?=base_url();?>products/get_facturas_por_producto"><span class="glyphicon glyphicon-list-alt"></span> Ventas por productos</a></li>
                             <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Gráfica de ventas </b></a>
 
 								<ul class="dropdown-menu">

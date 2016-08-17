@@ -59,7 +59,7 @@ class Products extends CI_Controller {
             $this->iva_model->get_iva($dato);
 	 }
 
-	public function get_faturas_por_producto(){
+	public function get_facturas_por_producto(){
 		$this->load->model('product_model');
 		$products = $this->product_model->get_all_products();
 		$data['products'] = $products;
