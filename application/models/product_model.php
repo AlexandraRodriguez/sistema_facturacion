@@ -55,6 +55,20 @@ class Product_model extends CI_Model {
 
     		return $this->db->insert('PRODUCTO', $data);
 		}
+<<<<<<< HEAD
 
 
 }
+=======
+		
+		public function get_facturas($id){
+			$this->db->select('id_factura, cantidad, subtotal');
+			$this->db->from('factura_detalle');
+			$this->db->where('id_producto', $id);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+		
+		
+}
+>>>>>>> 05668bbd0234f866dede7784e7114b2a614001f0

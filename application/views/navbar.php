@@ -44,7 +44,8 @@
                     <ul class="dropdown-menu">
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Ventas por días</a></li>
 							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=bodega&tipoTransaccion=ingreso"><span class="glyphicon glyphicon-list-alt"></span> Ventas por cajero</a></li>
-							<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salida"><span class="glyphicon glyphicon-list-alt"></span> Ventas por productos</a></li>
+							<li><a href="<?=base_url();?>clients/get_facturas_por_cliente"><span class="glyphicon glyphicon-list-alt"></span> Ventas por cliente</a></li>
+							<li><a href="<?=base_url();?>products/get_facturas_por_producto"><span class="glyphicon glyphicon-list-alt"></span> Ventas por productos</a></li>
                             <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Gráfica de ventas </b></a>
 
 								<ul class="dropdown-menu">
@@ -96,7 +97,7 @@
 
 						</ul>
 					</li>
-					<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salidas_modificadas"><span class="glyphicon glyphicon-list-alt"></span> Datos de la empresa</a></li>
+					<li><a href="<?=base_url();?>companias/new_compania"><span class="glyphicon glyphicon-list-alt"></span> Datos de la empresa</a></li>
 					<li><a href="<?=base_url();?>materiales/fechasReporteIngresoSalida?nombreDeposito=almacen&tipoTransaccion=salidas_modificadas"><span class="glyphicon glyphicon-list-alt"></span> Personalización de colores</a></li>
 
                      <li><a href="#"><span class="glyphicon glyphicon-floppy-save"></span> Respaldo Base  Datos</a></li>

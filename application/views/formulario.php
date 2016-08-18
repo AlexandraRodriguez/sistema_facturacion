@@ -197,8 +197,8 @@ function show_alert(){
                     </div>
                     <div style ="border-color: white;
                           //border-style: solid;
-                          display: block
-                          float: right;
+/*                          display: block
+                          float: right;*/
                           height: 100%;
                           width: 45%;
                           float: left;">
@@ -214,8 +214,8 @@ function show_alert(){
                     </div>
                     <div style ="border-color: black;
                           //border-style: solid;
-                          display: block
-                          float: right;
+/*                          display: block
+                          float: right;*/
                           height: 100%;
                           width: 25%;
                           float: left;" >
