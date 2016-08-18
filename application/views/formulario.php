@@ -98,12 +98,12 @@ function add_data_to_modal(data, message){
       //console.log(data[i]);
       $("#product_list tbody").append(
       '<tr>'+
-        '<td>'+data[i].NOMBRE+'</td>'+
-        '<td>'+data[i].PRECIO+'</td>'+
-        '<td>'+data[i].STOCK+'</td>'+
+        '<td>'+data[i].nombre+'</td>'+
+        '<td>'+data[i].precio+'</td>'+
+        '<td>'+data[i].stock+'</td>'+
         '<td>'+
           '<button id="button_append_'+i+
-          '" class="glyphicon glyphicon-plus btn btn-success" onclick="append_to_list(\''+data[i].NOMBRE+'\','+data[i].PRECIO+')">'+
+          '" class="glyphicon glyphicon-plus btn btn-success" onclick="append_to_list(\''+data[i].nombre+'\','+data[i].precio+')">'+
           '</button>'+
         '</td>'+
       '</tr>');
@@ -142,10 +142,10 @@ function insert_invoice(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Select Product</h4>
+        <h4 class="modal-title">Seleccionar Productos</h4>
       </div>
       <div class="modal-body">
-        <p>In this place show the produts</p>
+        <p>Seleccione los productos de la lista</p>
         <table class="table table-hover table-responsive" id="product_list">
           <thead>
           <tr>

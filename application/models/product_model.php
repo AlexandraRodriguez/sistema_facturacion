@@ -21,7 +21,7 @@ class Product_model extends CI_Model {
 		}
 
 		public function get_product_names() {
-			$query = $this->db->query('SELECT nombre FROM product');
+			$query = $this->db->query('SELECT nombre FROM producto');
 			return $query->result_array();
 		}
 
@@ -34,13 +34,13 @@ class Product_model extends CI_Model {
 
 		public function get_stock_by_product($id){
 			if($id != FALSE){
-				$query = $this->db->query('SELECT stock FROM product WHERE id='.$id.'');
+				$query = $this->db->query('SELECT stock FROM producto WHERE id='.$id.'');
 				return $query->row_array();
 			}
 		}
 
 		public function get_all_products(){
-			$query = $this->db->query('SELECT * FROM PRODUCTO ORDER BY NOMBRE');
+			$query = $this->db->query('SELECT * FROM producto ORDER BY nombre');
 			return $query->result_array();
 		}
 
@@ -49,18 +49,13 @@ class Product_model extends CI_Model {
 
 			//$data['id_producto'] = null;
 			
-    		$data['NOMBRE'] = $product['nombre'];
-			$data['PRECIO'] = $product['precio'];
-			$data['STOCK'] = $product['stock'];
+    		$data['nombre'] = $product['nombre'];
+			$data['precio'] = $product['precio'];
+			$data['stock'] = $product['stock'];
 
-    		return $this->db->insert('PRODUCTO', $data);
+    		return $this->db->insert('producto', $data);
 		}
-<<<<<<< HEAD
-
-
-}
-=======
-		
+	
 		public function get_facturas($id){
 			$this->db->select('id_factura, cantidad, subtotal');
 			$this->db->from('factura_detalle');
@@ -71,4 +66,3 @@ class Product_model extends CI_Model {
 		
 		
 }
->>>>>>> 05668bbd0234f866dede7784e7114b2a614001f0
