@@ -15,7 +15,7 @@ $(function(){
 });
 
 function crear_linea_tabla(){
-    
+
     temp_number =$('#tabla tbody tr').size();
     temp_id='id_linea_'+temp_number+'';
 
@@ -91,7 +91,7 @@ function insert_invoice(){
 
   get_ajax_data(url, type, data, show_new_invoice);
 	//var lines = extract_lines();
-	
+
 }
 
 function show_new_invoice(data){
@@ -120,13 +120,13 @@ function add_data_to_modal(data, message){
 
       i++;
     }
-    
+
     //console.log(message);
 }
 
 function append_to_list(NOMBRE, PRECIO){
-    
-    
+
+
 }
 function show_alert(){
 	alert("Product Added");
@@ -148,7 +148,7 @@ function show_alert(){
         <table class="table table-hover table-responsive" id="product_list">
           <thead>
           <tr>
-            <th> 
+            <th>
               Producto
             </th>
             <th>
@@ -245,9 +245,9 @@ function show_alert(){
                 display: block;
                 height: 50%;
                 width: 100%; overflow:scroll;">
-                
+
                   <table class="table table-hover table-responsive" id="tabla">
-                    
+
                     <tbody id="tabla_tbody">
 
                     </tbody>
