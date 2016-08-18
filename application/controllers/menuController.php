@@ -25,13 +25,12 @@ class MenuController extends CI_Controller{
     if($data!=null){
       $response['success']='true';
       $response['data']=$data;
-      $response['message']='Obtuve datos';    
+      $response['message']='Obtuve datos';
     }else{
       $response['success']='true';
       $response['data']='not';
       $response['message']='Data Dismiss';
     }
-
     //RETORNA AL LADO CLIENTE EL ARRAY CONVERTIDO EN UNA CADENA DE TEXTO
     echo json_encode($response);
   }

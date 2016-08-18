@@ -18,23 +18,15 @@ function crear_linea_tabla(){
 
     temp_number =$('#tabla tbody tr').size();
     temp_id='id_linea_'+temp_number+'';
-
-    html_linea_tabla = $('<tr id="'+temp_id+'">').load('application/views/html_linea_tabla.html');
-    //ENCONTRAR EL CHILDREN BUTTON
-    //MANEJARLO COMO OBJETO JQUERY
-    //ANADIRLE EL ONCLICK
-    //ANIADIR LA FUNCION PASANDO EL PARAMETRO DE ID temp_id
-    //html_linea_tabla.children('button');
+    html_linea_tabla = $('<tr id="'+temp_id+'">').load('application/views/html_linea_tabla.php',{id_linea_tabla:''+temp_id+''});
     $("#tabla_tbody").append(html_linea_tabla);
 }
 
 function get_products(esta_linea) {
-  global_line_id=esta_linea;
-
+  global_line_id=esta_linea.id;
   url='<?php echo site_url('index.php/get_products'); ?>';
   data = {};
   type='POST';
-
   get_ajax_data(url, type, data, add_data_to_modal);
 }
 
@@ -45,7 +37,6 @@ function get_ajax_data(purl, ptype, pdata, pfunction){
     type: ptype,
     data: pdata,
   }).done(function (response){
-
         //Parseando cadena de texto obtenidos de php a JSON
         respuesta = JSON.parse(response);
         //console.log(temp);
@@ -105,7 +96,6 @@ function add_data_to_modal(data, message){
     i=0;
     while(data[i]){
       //console.log(data[i]);
-
       $("#product_list tbody").append(
       '<tr>'+
         '<td>'+data[i].NOMBRE+'</td>'+
@@ -125,11 +115,22 @@ function add_data_to_modal(data, message){
 }
 
 function append_to_list(NOMBRE, PRECIO){
-
-
+		$('#'+global_line_id+' td:nth-child(1) input').val(NOMBRE);
+		$('#'+global_line_id+' td:nth-child(4) input').val(PRECIO);
+		$('#myModal').modal("toggle");
 }
 function show_alert(){
 	alert("Product Added");
+}
+function insert_invoice(){
+	patt= /[A-Za-z]{4,20}/;
+	if(!patt.test(''+$("#razon_social").val()+'')){
+		alert('Cliente no valido');
+	}
+	patt_nit=/[0-9]+/;
+	if(!patt_nit.test(''+$("#nit_ci").val()+'')){
+		alert('Nit_Ci no valido');
+	}
 }
 </script>
 
@@ -163,7 +164,6 @@ function show_alert(){
           </tbody>
 
         </table>
-				<button onclick="show_alert()">Add this</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -205,7 +205,7 @@ function show_alert(){
                           <div class="form-group" style="margin:20px 20px;">
                             <label for="Nfactura">Cliente</label>
 														<input hidden="true" id="client_id" name="client_id" value="1">
-                            <input style="width:90%" id="razon_social" type="text" class="form-control"  name="client" placeholder="">
+                            <input style="width:90%" id="razon_social" type="text" pattern="[A-Za-z]{20}" class="form-control"  name="client" placeholder="">
                           </div>
                           <div class="form-group" style="margin:20px 20px;">
                             <label for="fecha de factura">NIT</label>
@@ -226,27 +226,27 @@ function show_alert(){
                           <button style = "margin:0 40px;" id="cancelar" type="button" class="btn btn-danger">Cancelar</button>
                     </div>
           </div>
-          <table class="table table-hover table-responsive" id="tabla_head">
-          <thead>
-                      <tr>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>P.U.</th>
-                        <th>Dto (%)</th>
-                        <th>Iva(%)</th>
-                        <th>imp 2</th>
-                        <th>Subtotal</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-          </table>
+
           <div style ="border-color: blue;
                 //border-style: solid;
                 display: block;
                 height: 50%;
                 width: 100%; overflow:scroll;">
 
+
+
                   <table class="table table-hover table-responsive" id="tabla">
+										<thead>
+					                      <tr>
+					                        <th>Producto</th>
+																	<th></th>
+					                        <th>Cantidad</th>
+					                        <th>P.U.</th>
+					                        <th>Iva(%)</th>
+					                        <th>Subtotal</th>
+					                        <th></th>
+					                      </tr>
+					            </thead>
 
                     <tbody id="tabla_tbody">
 
