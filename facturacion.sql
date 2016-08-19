@@ -20,7 +20,7 @@ drop table if exists USUARIOS;
 /*==============================================================*/
 /* Table: CLIENTE                                               */
 /*==============================================================*/
-create table CLIENTE
+create table CLIENTE                                               
 (
    	ID_CLIENTE		int not null,
    	NOMBRE			char(50),
@@ -33,7 +33,7 @@ create table CLIENTE
 /*==============================================================*/
 /* Table: FACTURA                                               */
 /*==============================================================*/
-create table FACTURA
+create table FACTURA                                               
 (
    	ID_FACTURA          		INT not null,
    	ID_CLIENTE       	INT not null,
@@ -47,7 +47,7 @@ create table FACTURA
 /*==============================================================*/
 /* Table: FACTURA_DETALLE                                       */
 /*==============================================================*/
-create table FACTURA_DETALLE
+create table FACTURA_DETALLE                                       
 (
    ID_FACTURA_DETALLE                   INT not null,
    ID_FACTURA            int not null,
@@ -60,13 +60,13 @@ create table FACTURA_DETALLE
 /*==============================================================*/
 /* Table: PRODUCTO                                              */
 /*==============================================================*/
-create table PRODUCTO
+create table PRODUCTO                                              
 (
    ID_PRODUCTO          int not null,
    NOMBRE               char(30),
    PRECIO               float,
    ID_TIPO              int,
-   STOCK                int,
+   STOCK		int,
    primary key AUTO_INCREMENT(ID_PRODUCTO)
 );
 /*==============================================================*/
@@ -98,6 +98,9 @@ create table COMPANIA
 (
    ID_COMPANIA        int not null,
    NOMBRE_COMPANIA    char(50),
+   DIRECCION	      char(50),
+   TELEFONO 	      char(10),
+   NIT                char(20),
    primary key AUTO_INCREMENT(ID_COMPANIA)
 );
 /*==============================================================*/
