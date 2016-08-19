@@ -8,7 +8,6 @@ class MenuController extends CI_Controller{
     //$this->load->view('menuView');
   }
 
-
   public function factura(){
     $this->load->view('header.php');
     $this->load->view('navbar.php');
@@ -25,12 +24,13 @@ class MenuController extends CI_Controller{
     if($data!=null){
       $response['success']='true';
       $response['data']=$data;
-      $response['message']='Obtuve datos';
+      $response['message']='Obtuve datos';    
     }else{
       $response['success']='true';
       $response['data']='not';
       $response['message']='Data Dismiss';
     }
+
     //RETORNA AL LADO CLIENTE EL ARRAY CONVERTIDO EN UNA CADENA DE TEXTO
     echo json_encode($response);
   }
@@ -74,7 +74,33 @@ class MenuController extends CI_Controller{
   //public function prueba(){}
   public function impresionfactura(){
 
-	$this->load->view('VistaImpresionFactura/impresion');
+	//$this->load->view('VistaImpresionFactura/impresion');
+    $data['invoice_date'] = $this->input->post('invoice_date');
+    //$data['client_id'] = $this->input->post('client_id');
+    $data['razon_social'] = $this->input->post('razon_social');
+    $data['nit_ci'] = $this->input->post('nit_ci');
+    //$data['user_id'] = $this->input->post('user_id');
+    $data['total_amount'] = $this->input->post('total_amount');
+    //$data['warehouse_id'] = $this->input->post('warehouse_id');
+    $data['lines']  = $this->input->post('lines');
+
+
+    //LLAMAR FUNCION ESCRITURA DB INVOICE
+    //$this->load->model('Modelo_Facturacion');
+    //$this->Modelo_Facturacion->insertar_factura($data);
+    
+    
+    if($data!=null){
+      $response['success']='true';
+      $response['data']=$data;
+      $response['message']='Obtuve datos';    
+    }else{
+      $response['success']='true';
+      $response['data']='not';
+      $response['message']='Data Dismiss';
+    }
+    echo json_encode($response);
+
   }
 
 }?>

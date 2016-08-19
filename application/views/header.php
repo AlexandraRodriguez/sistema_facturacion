@@ -7,6 +7,7 @@
         <script type="text/javascript" src="<?= base_url("js/jquery-1.11.3.min.js")?>"></script>
 
         <script type="text/javascript" src="<?= base_url("bootstrap/js/bootstrap.js")?>"></script>
+		<script type="text/javascript" src="<?= base_url("js/jquery.jqprint.js")?>">></script>
 
         <style>
         	.cabecera{font-size:24px;text-align:center; }
